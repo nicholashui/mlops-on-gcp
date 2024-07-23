@@ -43,6 +43,10 @@ steps:
   - 'ENABLE_TUNING=$_ENABLE_TUNING'
   dir: $_PIPELINE_FOLDER
 
-
+logsBucket: 'gs://qwiklabs-gcp-02-cda31821e0f0'
+serviceAccount: 'projects/qwiklabs-gcp-02-cda31821e0f0/serviceAccounts/tfx-tuner-caip-service-account@qwiklabs-gcp-02-cda31821e0f0.iam.gserviceaccount.com'
+options:
+  logging: NONE
+  
 # Push the custom image to Container Registry 
 images: ['gcr.io/$PROJECT_ID/$_TFX_IMAGE_NAME:$TAG_NAME']
